@@ -13,17 +13,17 @@ This project is a Python application that uses the 'customtkinter' library to cr
 **'create_scrollable_frame(parent)'**
 Creates a scrollable frame within a given parent widget. This is useful for displaying content that exceeds the visible area.
 
+
 **'insert_query()'**
 Handles the insertion of data into a specified table. The function:
-
   1. Retrieves the table name and data from user input.
   2. Parses the input data into column-value pairs.
   3. Constructs an SQL INSERT query and executes it.
   4. Shows success or error messages based on the outcome.
 
+
 **'select_query()'**
 Handles data retrieval from a specified table. The function:
-
   1. Retrieves the table name and optional condition from user input.
   2. Constructs an SQL SELECT query and executes it.
   3. Displays the results in a textbox widget.
@@ -32,7 +32,6 @@ Handles data retrieval from a specified table. The function:
 
 **'update_query()'**
 Handles updating data in a specified table. The function:
-
   1. Retrieves the table name, condition, and new values from user input.
   2. Constructs an SQL UPDATE query and executes it.
   3. Shows success or error messages based on the outcome.
@@ -40,7 +39,6 @@ Handles updating data in a specified table. The function:
 
 **'delete_query()'**
 Handles deletion of data from a specified table. The function:
-
   1. Retrieves the table name and condition from user input.
   2. Constructs an SQL DELETE query and executes it.
   3. Shows success or error messages based on the outcome.
