@@ -10,10 +10,10 @@ This project is a Python application that uses the 'customtkinter' library to cr
 5. PIL (Pillow): Used for image processing.
 
 ## Functions
-create_scrollable_frame(parent)
+**'create_scrollable_frame(parent)'**
 Creates a scrollable frame within a given parent widget. This is useful for displaying content that exceeds the visible area.
 
-insert_query()
+**'insert_query()'**
 Handles the insertion of data into a specified table. The function:
 
   1. Retrieves the table name and data from user input.
@@ -21,8 +21,7 @@ Handles the insertion of data into a specified table. The function:
   3. Constructs an SQL INSERT query and executes it.
   4. Shows success or error messages based on the outcome.
 
-
-select_query()
+**'select_query()'**
 Handles data retrieval from a specified table. The function:
 
   1. Retrieves the table name and optional condition from user input.
@@ -31,7 +30,7 @@ Handles data retrieval from a specified table. The function:
   4. Shows messages if there are no results or if an error occurs.
 
 
-update_query()
+**'update_query()'**
 Handles updating data in a specified table. The function:
 
   1. Retrieves the table name, condition, and new values from user input.
@@ -39,7 +38,7 @@ Handles updating data in a specified table. The function:
   3. Shows success or error messages based on the outcome.
 
 
-delete_query()
+**'delete_query()'**
 Handles deletion of data from a specified table. The function:
 
   1. Retrieves the table name and condition from user input.
@@ -47,7 +46,7 @@ Handles deletion of data from a specified table. The function:
   3. Shows success or error messages based on the outcome.
 
 
-clear_fields()
+**'clear_fields()'**
 Clears all input fields and the result textbox.
 
 
