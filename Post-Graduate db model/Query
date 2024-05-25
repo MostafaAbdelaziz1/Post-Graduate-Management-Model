@@ -1,0 +1,136 @@
+create database isp
+use isp;
+
+create table student(
+f_Name varchar(20) not null,
+m_Name varchar(20) not null,
+L_Name varchar(20) not null,
+grade int not null,
+gender varchar(10) not null,
+age int not null,
+SSN_student int  PRIMARY KEY,
+major varchar(20) not null,
+level_ac varchar(20) not null,
+email varchar(20) not null,
+University_name varchar(20) not null,
+DBitrh_S date  not null,
+Graduation_No  int not null,
+adm_snn int, 
+ins_snn int,
+cours_crn int,
+id_depart int,
+
+CONSTRAINT FK_Administrativee FOREIGN KEY (adm_snn)
+REFERENCES administrativee (SSN_adm),
+
+CONSTRAINT FK_Instructor FOREIGN KEY (ins_snn) 
+REFERENCES Instructor(SSN_ins),
+
+CONSTRAINT FK_Coursess FOREIGN KEY (cours_crn) 
+REFERENCES Coursess (crn),
+
+CONSTRAINT FK_Departmentt FOREIGN KEY (id_depart)
+REFERENCES Departmentt (id_d)
+
+);
+
+
+CREATE TABLE student_PHONE(
+SSN_student int, 
+Phone varchar(15), 
+Primary key(SSN_student , Phone ), 
+foreign key(SSN_student)
+REFERENCES student(SSN_student)
+);
+
+
+
+
+
+create table administrativee (
+Name_d varchar(20) not null,
+E_mail_d varchar(20) not null,
+phone int not null,
+SSN_adm int  PRIMARY KEY,
+);
+
+
+CREATE TABLE administrativee_PHONE
+(
+SSN_adm int, 
+Phone varchar(15), 
+Primary key(SSN_adm , Phone ), 
+foreign key(SSN_adm)
+REFERENCES  administrativee (SSN_adm)
+);
+
+
+
+
+create table Instructor (
+Name_in varchar(20) not null,
+E_mail_in varchar(20) not null,
+age int not null,
+Date_of_join date not null,
+major varchar(20) not null ,
+SSN_ins int PRIMARY KEY ,
+DBirth_in date not null,
+id_dep int,
+snn_adm int,
+
+CONSTRAINT FK_PersonOrder_Department FOREIGN KEY (id_dep) 
+REFERENCES Departmentt(id_d),
+
+CONSTRAINT FK_PersonOrder_AdministrativeStaff FOREIGN KEY (snn_adm)
+REFERENCES administrativee (SSN_adm)
+);
+
+
+CREATE TABLE Instructor_PHONE
+(
+SSN_ins int, 
+Phone varchar(15), 
+Primary key(SSN_ins , Phone ), 
+foreign key(SSN_ins)
+REFERENCES Instructor(SSN_ins)
+);
+
+
+
+create table Coursess(
+crn int   PRIMARY KEY,
+Name_c varchar(20) not null,
+num_student int not null,
+);
+
+
+create table Departmentt(
+id_d int  PRIMARY KEY,
+location_d varchar(20) not null,
+name_d varchar(20) not null,
+Date_d date not null,
+num_student int not null,
+);
+
+
+
+SELECT num_student, location_d
+FROM Departmentt;
+
+SELECT *FROM student ;
+
+ALTER TABLE administrativee
+DROP COLUMN phone;
+
+UPDATE student
+SET age = 34
+WHERE SSN_student=2040;
+
+SELECT*FROM student ;
+
+select* from administrativee;
+
+select*from student
+full join Coursess on student.SSN_student=Coursess.crn;
+
+sELECT*FROM Instructor  ;
