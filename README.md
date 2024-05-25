@@ -2,6 +2,7 @@
 
 This project is a Python application that uses the 'customtkinter' library to create a graphical user interface (GUI) for interacting with a SQL Server database. The application allows users to perform basic CRUD (Create, Read, Update, Delete) operations on the database through a user-friendly interface.
 
+
 ## Libraries Used
 1. customtkinter (ctk): A custom Tkinter library for creating modern GUI applications.
 2. tkinter (tk): The standard Python interface to the Tk GUI toolkit.
@@ -9,12 +10,14 @@ This project is a Python application that uses the 'customtkinter' library to cr
 4. prettytable: Used for creating ASCII tables, though not directly used in the provided code.
 5. PIL (Pillow): Used for image processing.
 
+
 ## Functions
-**'create_scrollable_frame(parent)'**
+
+**1. 'create_scrollable_frame(parent)'**
 Creates a scrollable frame within a given parent widget. This is useful for displaying content that exceeds the visible area.
 
 
-**'insert_query()'**
+**2. 'insert_query()'**
 Handles the insertion of data into a specified table. The function:
   1. Retrieves the table name and data from user input.
   2. Parses the input data into column-value pairs.
@@ -22,7 +25,7 @@ Handles the insertion of data into a specified table. The function:
   4. Shows success or error messages based on the outcome.
 
 
-**'select_query()'**
+**3. 'select_query()'**
 Handles data retrieval from a specified table. The function:
   1. Retrieves the table name and optional condition from user input.
   2. Constructs an SQL SELECT query and executes it.
@@ -30,21 +33,21 @@ Handles data retrieval from a specified table. The function:
   4. Shows messages if there are no results or if an error occurs.
 
 
-**'update_query()'**
+**4. 'update_query()'**
 Handles updating data in a specified table. The function:
   1. Retrieves the table name, condition, and new values from user input.
   2. Constructs an SQL UPDATE query and executes it.
   3. Shows success or error messages based on the outcome.
 
 
-**'delete_query()'**
+**5. 'delete_query()'**
 Handles deletion of data from a specified table. The function:
   1. Retrieves the table name and condition from user input.
   2. Constructs an SQL DELETE query and executes it.
   3. Shows success or error messages based on the outcome.
 
 
-**'clear_fields()'**
+**6. 'clear_fields()'**
 Clears all input fields and the result textbox.
 
 
